@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.DeviceFragment">
+
+        <include
+            android:id="@+id/navi_bar"
+            layout="@layout/navi_bar" />
+
+        <TextView
+            android:id="@+id/bluetooth_status"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:text="点击搜索附近设备"
+            app:layout_constraintTop_toBottomOf="@id/navi_bar" />
+
+        <TextView
+            android:id="@+id/save_bluetooth_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:text="已保存设备"
+            app:layout_constraintTop_toBottomOf="@id/bluetooth_status" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/save_bluetooth_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/save_bluetooth_list_title" />
+
+        <TextView
+            android:id="@+id/search_bluetooth_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:text="附近设备"
+            app:layout_constraintTop_toBottomOf="@id/save_bluetooth_list" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_bluetooth_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/search_bluetooth_list_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -42,7 +42,7 @@ public class BluetoothViewAdapter extends RecyclerView.Adapter<BluetoothViewAdap
 
     @Override
     public void onBindViewHolder(NormalTextViewHolder holder, int position) {
-        holder.mBleRssi.setText(itemData.get(position).getName() + "-" + itemData.get(position).getAddress() + "-" + itemData.get(position).rssi);
+        holder.mBleRssi.setText(itemData.get(position).getName() + " - " + itemData.get(position).getAddress());
 
     }
 
